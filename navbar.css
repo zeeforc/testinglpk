@@ -1,0 +1,21 @@
+.navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 8, 16, 0.96),
+    rgba(7, 19, 48, 0.98)
+  );
+  backdrop-filter: blur(8px);
+}
+
+.nav-link {
+  color: #f9fafb !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary-orange) !important;
+}
+
+.nav-link.active {
+  color: var(--orange-main) !important;
+}

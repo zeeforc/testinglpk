@@ -1,0 +1,12 @@
+.footer {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), #020617);
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(55, 65, 81, 0.8);
+}
+
+.partner-logo {
+  max-height: 48px;
+  object-fit: contain;
+  filter: brightness(0.9);
+}

@@ -1,0 +1,370 @@
+:root {
+  --orange: #f49f1c;
+  --blue: #2455c9;
+  --dark: #05060c;
+  --glass-bg: rgba(10, 14, 25, 0.95);
+  --radius-xl: 36px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #05060c;
+  color: #f9fafb;
+}
+
+/* Hero */
+
+/* .hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/bg-hero-kurikulum.png");
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+ 
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+} */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/bg-hero-kurikulum.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: visible; /* penting agar efek bisa “turun” ke bawah */
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2; /* konten tetap di atas efek */
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 3vw + 1.8rem, 4rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.btn-orange {
+  background: #f49f1c;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-orange:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 22px #f49f1c;
+}
+
+.hero-illustration-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-illustration-card {
+  width: min(560px, 100%);
+  border-radius: 40px;
+  padding: 1.5rem 2rem 2rem;
+  /* background: radial-gradient(
+    circle at 10% 0,
+    rgba(255, 255, 255, 0.18),
+    rgba(3, 7, 18, 0.98)
+  );
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.9); */
+  overflow: hidden;
+}
+
+.hero-illustration-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Kurikulum sections */
+
+.section-wrapper {
+  background-image: url("/assets/bg-mekanik-k.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.curriculum-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.curriculum-bg-top {
+  /* background: linear-gradient(180deg, #05060c 0%, #040507 60%, #05060c 100%); */
+  background-image: url("/assets/bg-listrik-m.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.curriculum-card {
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2.25rem;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.08),
+    rgba(11, 17, 30, 0.98)
+  );
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.curriculum-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  margin-bottom: 0.35rem;
+}
+
+.curriculum-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.curriculum-desc {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  max-width: 420px;
+}
+
+.btn-orange {
+  background: linear-gradient(120deg, #f59e0b, #f97316);
+  border: none;
+  border-radius: 999px;
+  padding-inline: 1.7rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.btn-orange:hover {
+  background: linear-gradient(120deg, #facc15, #fb923c);
+  color: #020617;
+}
+
+.btn-blue {
+  background: linear-gradient(120deg, #60a5fa, #3b82f6);
+  border: none;
+  border-radius: 999px;
+  padding-inline: 1.7rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #020617;
+}
+
+.btn-blue:hover {
+  background: linear-gradient(120deg, #bfdbfe, #60a5fa);
+  color: #020617;
+}
+
+.curriculum-meta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.meta-icon {
+  font-size: 1.7rem;
+}
+
+.meta-label {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.meta-text {
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+.curriculum-image-card {
+  position: relative;
+  border-radius: 44px; /* radius besar seperti desain */
+  padding: 1.75rem; /* jarak tepi ke gambar */
+  background: radial-gradient(
+    circle at 10% 0,
+    rgba(255, 255, 255, 0.14),
+    rgba(7, 9, 17, 0.98)
+  ); /* panel hitam glossy */
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.98);
+  overflow: hidden;
+  justify-content: end;
+  display: flex;
+}
+
+/* border putih + glow */
+.curriculum-image-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.45);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* cahaya oranye di bagian bawah card */
+.curriculum-image-card.overlay-orange::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 10% 85%,
+    rgba(244, 159, 28, 0.9),
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+/* kalau nanti ada versi listrik / biru tinggal bikin overlay-blue sama konsepnya */
+.curriculum-image-card.overlay-blue::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 10% 85%,
+    rgba(59, 130, 246, 0.85),
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+/* gambar di dalam panel */
+.curriculum-image-card img {
+  width: 90%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1; /* supaya di atas overlay */
+}
+
+/* teks "Basic Welding" / "Mekanik" di pojok kiri bawah */
+.curriculum-image-label {
+  position: absolute;
+  left: 3rem;
+  bottom: 2.6rem;
+  z-index: 2;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+}
+
+/* sedikit efek hover biar hidup */
+.curriculum-image-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.curriculum-image-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 40px 110px rgba(0, 0, 0, 1);
+}
+
+.curriculum-image-card.overlay-orange::before,
+.curriculum-image-card.overlay-blue::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.85), transparent 35%);
+  pointer-events: none;
+}
+
+.curriculum-image-card.overlay-orange::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(
+    circle at 10% 80%,
+    rgba(244, 159, 28, 0.75),
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.curriculum-image-card.overlay-blue::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(
+    circle at 10% 80%,
+    rgba(59, 130, 246, 0.7),
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+/* Footer */
+
+.footer {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), #020617);
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(55, 65, 81, 0.8);
+}
+
+.footer-border {
+  border-top: 1px solid rgba(75, 85, 99, 0.8);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.partner-logo {
+  max-height: 55px;
+  object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 5rem;
+  }
+  .curriculum-card {
+    margin-bottom: 2.5rem;
+  }
+}

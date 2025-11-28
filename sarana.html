@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sarana & Prasarana | LPK Paiton Selaras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap (grid & utility) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="sarana.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <!-- Ganti src logo sesuai aset -->
+          <img src="assets/logo.png" alt="Logo LPK" height="38" class="me-2" />
+          <div class="d-flex flex-column lh-sm">
+            <span class="fw-semibold">Lembaga Pelatihan Kerja</span>
+            <small class="text-warning">Paiton Selaras</small>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="mainNavbar"
+        >
+          <ul class="navbar-nav gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kurikulum.html">Kurikulum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pelatihan.html">Pelatihan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sarana.html">Sarana Prasarana</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Acara
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="berita.html">Berita</a></li>
+                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero-sarana p-3">
+        <div class="hero-overlay-top"></div>
+        <div class="container hero-inner">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1 class="hero-title">
+                Sarana &<br />
+                Prasarana
+              </h1>
+              <p class="text-light fs-6 mb-0" style="max-width: 420px">
+                Rangkaian kurikulum praktik dan teori yang dirancang bersama
+                mitra industri agar peserta siap terjun ke dunia kerja di bidang
+                mekanik dan listrik.
+              </p>
+              <button class="btn-cta my-4">Selengkapnya</button>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-illustration-wrap">
+                <div class="hero-illustration-card">
+                  <!-- ganti dengan ilustrasi sesuai desain -->
+                  <img src="assets/sarana-icon.png" alt="Ilustrasi mekanik" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAIL SARANA -->
+      <section class="section-detail section-sarana">
+        <div class="container">
+          <h6 class="section-subtitle">Detail</h6>
+          <h2 class="section-title">Sarana</h2>
+
+          <p class="section-body">
+            Sampai saat ini LPK Paiton Selaras telah memiliki sejumlah sarana
+            untuk menunjang kegiatan Pelatihan di LPK Paiton Selaras. Sarana
+            yang dimaksud meliputi alat-alat bengkel, peralatan Ruang Office
+            (komputer, LCD, layar, printer, telpon, AC, lampu, meja, kursi,
+            almari, dan rak), perlengkapan Ruang Teori 1 dan 2 (kursi, meja,
+            papan tulis, LCD, layar, AC, lampu), perlengkapan Ruang Instalasi
+            (meja, kursi, tool rack, toolbox, AC), perlengkapan Ruang kerja
+            bangku (bangku kerja, kursi, tool rack, mesin bor listrik), Bengkel
+            Las (meja, kursi, mesin las SMAW, wearpack, helm las, sarung tangan
+            las, apron, sepatu safety, ear plug dan masker), Ruang Relay (kursi,
+            meja, papan tulis, layar, AC, lampu, toolbox, toolrack, komputer,
+            dan papan praktek), Ruang plc dan kontraktor (kursi, meja, papan
+            tulis, layar, AC, lampu, toolbox, toolrack, komputer, dan papan
+            praktek), sarana transportasi (mobil dinas), sarana teknologi
+            informasi (internet), perlengkapan toilet, dan kamar mandi.
+          </p>
+        </div>
+      </section>
+
+      <!-- DETAIL PRASARANA + SLIDER -->
+      <section class="section-detail section-prasarana">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <!-- Text block (left) -->
+            <div class="col-lg-5">
+              <h6 class="section-subtitle">Detail</h6>
+              <h2 class="section-title" id="prasaranaHeading">Prasarana</h2>
+
+              <p class="section-body" id="prasaranaDescription">
+                Prasarana yang digunakan saat ini adalah sejumlah ruangan yang
+                difungsikan untuk ruang pelatihan, bengkel las, ruang instalasi,
+                ruang relay, ruang PLC dan kontraktor, musholla, toilet, ruang
+                kantor, dan lahan parkir.
+              </p>
+
+              <div class="location-block">
+                <div class="location-title">LPK Paiton Selaras</div>
+                <div class="location-text">
+                  Jl Brigaan, Dusun Pesisir, Sumberanyar,<br />
+                  Kec Paiton, Kabupaten Probolinggo
+                </div>
+              </div>
+
+              <button class="btn-cta mt-3">Selengkapnya</button>
+            </div>
+
+            <!-- Glass card + slider (right) -->
+            <div class="col-lg-7">
+              <div class="glass-slider">
+                <div class="glass-card">
+                  <img
+                    id="prasaranaImage"
+                    src="assets/bengkel-las-1.jpg"
+                    alt="Bengkel Las"
+                  />
+                  <div class="glass-label" id="prasaranaTitle">Bengkel Las</div>
+                </div>
+
+                <!-- Slider controls -->
+                <button
+                  class="slider-btn prev"
+                  id="btnPrev"
+                  aria-label="Sebelumnya"
+                >
+                  ‹
+                </button>
+                <button
+                  class="slider-btn next"
+                  id="btnNext"
+                  aria-label="Berikutnya"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <div class="col-lg-4 text-center text-lg-start">
+            <img
+              src="assets/pe.png"
+              class="partner-logo mb-3"
+              alt="Paiton Energy"
+            />
+            <p class="small text-secondary mb-0">
+              PT Paiton Energy adalah perusahaan pembangkit listrik swasta
+              independen pertama di Indonesia.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <img src="assets/pomi.png" class="partner-logo mb-3" alt="POMI" />
+            <p class="small text-secondary mb-0">
+              PT POMI merupakan perusahaan operasi dan pemeliharaan pembangkit
+              listrik yang mengelola beberapa unit PLTU di Paiton.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <img
+              src="assets/lpk.png"
+              class="partner-logo mb-3"
+              alt="LPK Paiton Selaras"
+            />
+            <p class="small text-secondary mb-0">
+              LPK Paiton Selaras adalah lembaga pelatihan kerja yang berfokus
+              pada pengembangan kompetensi masyarakat sekitar melalui program
+              pelatihan teknis yang aplikatif.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-border text-center">
+          <small class="text-secondary"> © Copyright LPK Paiton Selaras </small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
