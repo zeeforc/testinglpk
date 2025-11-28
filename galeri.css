@@ -27,7 +27,7 @@ body {
 .hero-galeri {
   position: relative;
   min-height: 80vh;
-  background-image: url("assets/bg-hero-galeri.png"); /* gradient / gambar background */
+  background-image: url("assets/bg-hero-kurikulum.png"); /* gradient / gambar background */
   background-size: cover;
   background-position: center top;
   display: flex;
@@ -105,11 +105,8 @@ body {
 /* Dokumentasi Kegiatan */
 
 .section-gallery {
-  background: linear-gradient(
-    120deg,
-    var(--dark-bg) 0%,
-    var(--orange-deep) 55%
-  );
+  background: linear-gradient(120deg, #062750 60%, #ffffff 90%);
+
   padding-block: 4.5rem;
 }
 

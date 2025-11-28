@@ -22,7 +22,6 @@ body {
   color: var(--text-light);
 }
 
-
 /* Hero Sarana */
 
 .hero-sarana {
@@ -146,7 +145,7 @@ body {
       rgba(255, 255, 255, 0.04),
       transparent 60%
     ),
-    linear-gradient(120deg, var(--dark-bg) 0%, var(--orange-deep) 55%);
+    linear-gradient(120deg, #062750 30%, var(--orange-deep) 75%);
 }
 
 .section-prasarana {
@@ -155,7 +154,7 @@ body {
       rgba(255, 255, 255, 0.06),
       transparent 60%
     ),
-    linear-gradient(120deg, var(--orange-deep) 0%, var(--dark-deeper) 55%);
+    linear-gradient(60deg, #062750 30%, var(--orange-deep) 75%);
 }
 
 .section-subtitle {

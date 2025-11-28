@@ -124,13 +124,7 @@ body {
 /* BERITA TERBARU */
 
 .section-news-latest {
-  background: linear-gradient(
-    0deg,
-    var(--dark-deeper) 0%,
-    #000000 35%,
-    #000000 60%,
-    var(--dark-deeper) 100%
-  );
+  background: linear-gradient(-120deg, #062750 30%, var(--orange-deep) 75%);
   padding-block: 3.5rem;
 }
 
@@ -215,13 +209,8 @@ body {
 
 .section-news-list {
   position: relative;
-  background: linear-gradient(
-    120deg,
-    var(--orange-deep) 0%,
-    #000000 40%,
-    #000000 60%,
-    var(--dark-deeper) 100%
-  );
+  background: linear-gradient(-60deg, #062750 30%, var(--orange-deep) 75%);
+
   padding-block: 3.8rem 4.5rem;
 }
 
@@ -380,6 +369,7 @@ body {
   bottom: -200px;
   box-shadow: 0 0 55px rgba(0, 0, 0, 0.7) inset;
   opacity: 0.35;
+  z-index: -1;
 }
 
 /* FOOTER */

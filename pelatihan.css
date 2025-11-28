@@ -11,31 +11,9 @@
 }
 
 body {
-  background-color: #05060c;
+  background-color: #ffffff;
   color: #f9fafb;
 }
-
-/* Hero */
-
-/* .hero-section {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  background-image: url("/assets/bg-hero-kurikulum.png");
-
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section::before {
-  content: "";
- 
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 1;
-} */
 
 .hero-section {
   min-height: 100vh;
@@ -108,7 +86,7 @@ body {
 /* Kurikulum sections */
 
 .section-wrapper {
-  background-image: url("/assets/bg-mekanik-k.png");
+  background: linear-gradient(180deg, #dbe0fb 0%, #f9fbff 60%, #ffffff 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -120,8 +98,7 @@ body {
 }
 
 .curriculum-bg-top {
-  /* background: linear-gradient(180deg, #05060c 0%, #040507 60%, #05060c 100%); */
-  background-image: url("/assets/bg-listrik-m.png");
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 60%, #dbe0fb 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -132,11 +109,11 @@ body {
   padding: 2.5rem 2.25rem;
   background: radial-gradient(
     circle at top left,
-    rgba(255, 255, 255, 0.08),
-    rgba(11, 17, 30, 0.98)
+    #ffffff,
+    #ffffff
   );
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9),
-    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(253, 253, 253, 0.04) inset;
 }
 
 .curriculum-subtitle {
@@ -185,7 +162,7 @@ body {
 }
 
 .btn-blue:hover {
-  background: linear-gradient(120deg, #bfdbfe, #60a5fa);
+  background: linear-gradient(120deg, #ffffff, #60a5fa);
   color: #020617;
 }
 
@@ -219,9 +196,23 @@ body {
   background: radial-gradient(
     circle at 10% 0,
     rgba(255, 255, 255, 0.14),
-    rgba(7, 9, 17, 0.98)
+    rgba(206, 136, 23, 0.98)
   ); /* panel hitam glossy */
-  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.98);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  justify-content: end;
+  display: flex;
+}
+.curriculum-image-card-2 {
+  position: relative;
+  border-radius: 44px; /* radius besar seperti desain */
+  padding: 1.75rem; /* jarak tepi ke gambar */
+  background: radial-gradient(
+    circle at 10% 0,
+    rgba(248, 248, 248),
+    rgba(20, 42, 130, 0.98)
+  ); /* panel hitam glossy */
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   justify-content: end;
   display: flex;
@@ -279,6 +270,15 @@ body {
   position: relative;
   z-index: 1; /* supaya di atas overlay */
 }
+.curriculum-image-card-2 img {
+  width: 90%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1; /* supaya di atas overlay */
+}
 
 /* teks "Basic Welding" / "Mekanik" di pojok kiri bawah */
 .curriculum-image-label {
@@ -297,10 +297,6 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.curriculum-image-card:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 40px 110px rgba(0, 0, 0, 1);
-}
 
 .curriculum-image-card.overlay-orange::before,
 .curriculum-image-card.overlay-blue::before {

@@ -1,8 +1,8 @@
 .navbar {
   background: linear-gradient(
     90deg,
-    rgba(5, 8, 16, 0.96),
-    rgba(7, 19, 48, 0.98)
+    rgba(1, 34, 73, 0.98),
+    rgba(18, 56, 146, 0.98)
   );
   backdrop-filter: blur(8px);
 }
