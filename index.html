@@ -23,71 +23,126 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-      <div class="container py-2">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <!-- Ganti src logo sesuai aset -->
-          <img src="assets/logo.png" alt="Logo LPK" height="38" class="me-2" />
-          <div class="d-flex flex-column lh-sm">
-            <span class="fw-semibold">Lembaga Pelatihan Kerja</span>
-            <small class="text-warning">Paiton Selaras</small>
-          </div>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="mainNavbar"
-        >
-          <ul class="navbar-nav gap-lg-3">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Beranda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kurikulum.html">Kurikulum</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pelatihan.html">Pelatihan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sarana.html">Sarana Prasarana</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
-              >
-                Acara
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="berita.html">Berita</a></li>
-                <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+    
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container py-2">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/logo.png" alt="Logo LPK" height="38" class="me-2" />
+      <div class="d-flex flex-column lh-sm">
+        <span class="fw-semibold">Lembaga Pelatihan Kerja</span>
+        <small class="text-dark">Paiton Selaras</small>
       </div>
-    </nav>
+    </a>
+
+    <!-- Toggler: buka offcanvas di mobile -->
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#mobileNav"
+      aria-controls="mobileNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu desktop (horizontal biasa) -->
+    <div
+      class="collapse navbar-collapse justify-content-end d-none d-lg-flex"
+      id="mainNavbar"
+    >
+      <ul class="navbar-nav gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kurikulum.html">Kurikulum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pelatihan.html">Pelatihan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sarana.html">Sarana Prasarana</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+          >
+            Acara & Bantuan
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="berita.html">Berita</a></li>
+            <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+            <li><a class="dropdown-item" href="syarat.html">Panduan Mendaftar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menu mobile: offcanvas glass dari kanan -->
+    <div
+      class="offcanvas offcanvas-end offcanvas-glass d-lg-none"
+      tabindex="-1"
+      id="mobileNav"
+    >
+      <div class="offcanvas-header border-0">
+        <h6 class="mb-0">Menu</h6>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link offcanvas-nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link offcanvas-nav-link" href="kurikulum.html"
+              >Kurikulum</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link offcanvas-nav-link" href="pelatihan.html"
+              >Pelatihan</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link offcanvas-nav-link" href="sarana.html"
+              >Sarana Prasarana</a
+            >
+          </li>
+          <li class="nav-item mt-2">
+            <span class="text-uppercase small text-muted d-block mb-1"
+              >Acara</span
+            >
+            <a class="nav-link offcanvas-nav-link ps-3" href="berita.html"
+              >Berita</a
+            >
+            <a class="nav-link offcanvas-nav-link ps-3" href="galeri.html"
+              >Galeri</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <!-- Hero -->
     <section id="hero" class="hero-section">
-      <div class="container">
+      <div class="container p-2">
         <div class="row align-items-center gy-4">
           <div class="col-lg-6">
             <p class="hero-badge text-dark-emphasis mb-3">
               Lembaga Pelatihan Kerja Paiton Selaras
             </p>
-            <h1 class="hero-title hero-gradient-text mb-4">
+            <h1 class="hero-title hero-gradient-text mb-4" style="font-size: 3rem;">
               <span>Selamat Datang di</span>
-              <strong>Lembaga Pelatihan Kerja</strong>
+              <strong>Lembaga Pelatihan Kerja</strong> <br>
               <span>Paiton Selaras</span>
             </h1>
             <p class="fs-6 text-light-emphasis mb-4">
@@ -99,10 +154,10 @@
 
             <div class="d-flex flex-wrap gap-3 align-items-center">
               <a href="#kontak" class="btn btn-gradient"> Hubungi Kami </a>
-              <span class="text-light-emphasis small">
+              <!-- <span class="text-light-emphasis small">
                 Sertifikasi dan pelatihan tersertifikasi instruktur
                 berpengalaman.
-              </span>
+              </span> -->
             </div>
           </div>
 

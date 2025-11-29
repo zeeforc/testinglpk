@@ -1,13 +1,17 @@
-// Stack interaktif: gambar yang di-hover maju ke depan, yang lain geser ke kiri / kanan
-const galleryItems = document.querySelectorAll(".gallery-item");
-const stack = document.getElementById("galleryStack");
-const overlay = document.getElementById("previewOverlay");
-const previewImg = document.getElementById("previewImage");
+// Slider galeri dengan tombol Prev dan Next
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const stack = document.getElementById("galleryStack");
+  const overlay = document.getElementById("previewOverlay");
+  const previewImg = document.getElementById("previewImage");
+  const btnPrev = document.getElementById("galleryPrev");
+  const btnNext = document.getElementById("galleryNext");
 
-if (galleryItems.length) {
+  if (!galleryItems.length || !stack) return;
+
   const total = galleryItems.length;
+  let currentIndex = 0;
 
-  // atur posisi awal
   function applyPositions(frontIndex) {
     galleryItems.forEach((item, idx) => {
       item.classList.remove("pos-front", "pos-left", "pos-right");
@@ -22,37 +26,45 @@ if (galleryItems.length) {
     });
   }
 
-  applyPositions(0);
+  // posisi awal
+  applyPositions(currentIndex);
 
-  let hoverTimer = null;
-
-  galleryItems.forEach((item, idx) => {
-    item.addEventListener("mouseenter", () => {
-      // bersihkan timer sebelumnya
-      if (hoverTimer) clearTimeout(hoverTimer);
-
-      // beri delay sebelum ganti posisi
-      hoverTimer = setTimeout(() => {
-        applyPositions(idx);
-      }, 180); // 180ms, boleh dinaikkan misal 250 / 300
+  // tombol Next
+  if (btnNext) {
+    btnNext.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % total;
+      applyPositions(currentIndex);
     });
+  }
 
+  // tombol Prev
+  if (btnPrev) {
+    btnPrev.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + total) % total;
+      applyPositions(currentIndex);
+    });
+  }
+
+  // klik gambar untuk preview
+  galleryItems.forEach((item) => {
     item.addEventListener("click", () => {
+      if (!overlay || !previewImg) return;
       previewImg.src = item.src;
       previewImg.alt = item.alt || "Preview";
       overlay.classList.add("show");
     });
   });
 
-  // Tutup preview ketika overlay diklik
-  overlay.addEventListener("click", () => {
-    overlay.classList.remove("show");
-  });
+  // tutup preview
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      overlay.classList.remove("show");
+    });
+  }
 
-  // Tutup dengan Escape
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" && overlay) {
       overlay.classList.remove("show");
     }
   });
-}
+});

@@ -1,6 +1,6 @@
 :root {
   --orange-main: #f49f1c;
-  --orange-deep: #bf7e1d;
+  --orange-deep: #fd7a2a;
   --blue-main: #2455c9;
   --blue-deep: #0047a6;
   --dark-bg: #05060c;
@@ -26,8 +26,8 @@ body {
 
 .hero-sarana {
   position: relative;
-  min-height: 80vh;
-  background-image: url("assets/bg-hero-kurikulum.png"); /* gradient or image seperti desain */
+  min-height: 100vh;
+  background-image: url("/assets/bg-hero-kurikulum.webp");
   background-size: cover;
   background-position: center top;
   display: flex;
@@ -60,15 +60,27 @@ body {
 }
 
 .btn-cta {
-  background: linear-gradient(120deg, #f59e0b, #f97316);
-  color: #111827;
+  /* background: linear-gradient(120deg, #f59e0b, #f97316);
+  color: #111827; */
   border: none;
   border-radius: 999px;
   padding: 0.7rem 2.4rem;
   font-size: 0.9rem;
   font-weight: 500;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  background: linear-gradient(
+    90deg,
+    rgb(253, 122, 42, 0.98),
+    rgba(241, 100, 12, 0.98)
+  );
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  /* padding-inline: 2.4rem; */
+  /* border-radius: 999px; */
+  /* box-shadow: var(--shadow-soft); */
 }
 
 .btn-cta:hover {
@@ -141,20 +153,22 @@ body {
 
 .section-sarana {
   background: radial-gradient(
-      circle at 0 0,
-      rgba(255, 255, 255, 0.04),
-      transparent 60%
+      circle at 20% 10%,
+      rgba(76, 124, 203, 0.45),
+      transparent 45%
     ),
-    linear-gradient(120deg, #062750 30%, var(--orange-deep) 75%);
+    radial-gradient(circle at 95% 5%, rgba(19, 63, 140, 0.45), transparent 60%),
+    linear-gradient(180deg, #edf4ff, #ffffff);
 }
 
 .section-prasarana {
   background: radial-gradient(
-      circle at 0 0,
-      rgba(255, 255, 255, 0.06),
-      transparent 60%
+      circle at 20% 10%,
+      rgba(76, 124, 203, 0.45),
+      transparent 45%
     ),
-    linear-gradient(60deg, #062750 30%, var(--orange-deep) 75%);
+    radial-gradient(circle at 95% 5%, rgba(19, 63, 140, 0.45), transparent 60%),
+    linear-gradient(180deg, #edf4ff, #ffffff);
 }
 
 .section-subtitle {

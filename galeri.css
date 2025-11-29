@@ -26,8 +26,8 @@ body {
 
 .hero-galeri {
   position: relative;
-  min-height: 80vh;
-  background-image: url("assets/bg-hero-kurikulum.png"); /* gradient / gambar background */
+  min-height: 100vh;
+  background-image: url("/assets/bg-hero-kurikulum.webp"); /* gradient / gambar background */
   background-size: cover;
   background-position: center top;
   display: flex;
@@ -67,7 +67,7 @@ body {
   padding: 0.7rem 2.4rem;
   font-size: 0.9rem;
   font-weight: 500;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
@@ -87,12 +87,6 @@ body {
 .hero-illustration-card {
   border-radius: 36px;
   padding: 1.8rem;
-  /* background: radial-gradient(
-    circle at 0 0,
-    rgba(255, 255, 255, 0.18),
-    rgba(3, 7, 18, 0.98)
-  );
-  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.95); */
 }
 
 .hero-illustration-img {
@@ -105,8 +99,13 @@ body {
 /* Dokumentasi Kegiatan */
 
 .section-gallery {
-  background: linear-gradient(120deg, #062750 60%, #ffffff 90%);
-
+  background: radial-gradient(
+      circle at 20% 10%,
+      rgba(76, 124, 203, 0.45),
+      transparent 45%
+    ),
+    radial-gradient(circle at 95% 5%, rgba(19, 63, 140, 0.45), transparent 60%),
+    linear-gradient(180deg, #edf4ff, #ffffff);
   padding-block: 4.5rem;
 }
 
@@ -175,73 +174,106 @@ body {
 }
 
 /* Stack gambar */
-
 .gallery-stack {
   position: relative;
   width: 100%;
-  padding-top: 64%; /* aspek rasio 16:10 kira-kira */
+  height: 360px; /* sesuaikan tinggi */
+  overflow: visible;
+}
+.gallery-stack img {
+  aspect-ratio: 1/2;
 }
 
+/* atur posisi default item (gunakan class pos-front/left/right yang sudah kamu punya) */
 .gallery-item {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  width: 78%;
-  height: 100%;
+  width: 80%;
+  max-height: 100%;
   object-fit: cover;
-  border-radius: 26px;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.95);
+  border-radius: 24px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
-  transform-origin: center bottom;
-  transition: transform 0.28s ease, box-shadow 0.28s ease, opacity 0.2s ease;
 }
 
-/* posisi default: index 0 front, 1 right, 2 left */
+/* contoh posisi, sesuaikan dengan desain stack-mu */
 .gallery-item.pos-front {
-  transform: translate(-50%, 0) rotate(0deg) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 3;
+  opacity: 1;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85);
 }
-
 .gallery-item.pos-right {
-  transform: translate(-30%, 18px) rotate(7deg) scale(0.9);
+  transform: translate(-30%, -50%) scale(0.88);
   z-index: 2;
+  opacity: 0.9;
 }
-
 .gallery-item.pos-left {
-  transform: translate(-70%, 26px) rotate(-7deg) scale(0.9);
+  transform: translate(-70%, -50%) scale(0.75);
   z-index: 1;
+  opacity: 0.55;
 }
 
-/* ketika stack sedang di-hover, item lain sedikit redup */
-.gallery-stack:hover .gallery-item:not(.pos-front) {
-  opacity: 0.8;
+/* Tombol prev / next */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: radial-gradient(circle at 30% 0%, #ffffff, #111827);
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+}
+
+.gallery-prev {
+  left: 16px;
+}
+
+.gallery-next {
+  right: 16px;
+}
+
+.gallery-nav:hover {
+  transform: translateY(-50%) scale(1.05);
 }
 
 /* Overlay preview */
-
-.preview-overlay {
+.gallery-preview-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.86);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.24s ease;
-  z-index: 50;
+  transition: opacity 0.25s ease;
+  z-index: 999;
 }
 
-.preview-overlay.show {
+.gallery-preview-overlay.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-.preview-inner img {
+.gallery-preview-overlay img {
   max-width: 90vw;
-  max-height: 80vh;
-  border-radius: 24px;
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.95);
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
 }
 
 /* Footer */

@@ -22,7 +22,7 @@ body {
 /* Hero section */
 
 .hero-section {
-  min-height: 90vh;
+  min-height: 100vh;
   background: radial-gradient(
       circle at 20% 10%,
       rgba(76, 124, 203, 0.45),
@@ -30,30 +30,48 @@ body {
     ),
     radial-gradient(circle at 95% 5%, rgba(19, 63, 140, 0.45), transparent 60%),
     linear-gradient(180deg, #edf4ff, #ffffff);
-  display: flex;
+  background-image: url(/assets/bghereo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 6rem;
   padding-bottom: 2rem;
 }
-
-c
+.hero-gradient-text strong {
+  /* background: linear-gradient(120deg, #fc7b2b, #f4ad3b); */
+    background: linear-gradient(
+    120deg,
+    rgb(253, 122, 42),
+    rgba(241, 100, 12)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .hero-image-wrapper {
   position: relative;
-  border-radius: var(--radius-xl);
+  /* border-radius: var(--radius-xl); */
   overflow: hidden;
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+  /* padding-top: 6rem; */
 }
 
 .hero-image-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle at top left,
     rgba(244, 159, 28, 0.25),
     transparent 55%
-  );
+  ); */
   pointer-events: none;
 }
 
@@ -71,18 +89,6 @@ c
   color: #dbeafe;
 }
 
-/* Generic cards */
-
-/* .glass-card,
-.contact-card,
-.map-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-large);
-  padding: 2rem;
-} */
 .glass-card,
 .contact-card,
 .map-card {
@@ -126,7 +132,7 @@ c
 }
 
 .visi-tabs span.active {
-  color: #fef3c7;
+  color: #fd7a2a;
   border-color: var(--primary-orange);
 }
 
@@ -138,7 +144,7 @@ c
   border-radius: 22px;
   text-align: center;
   box-shadow: var(--shadow-soft);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .team-name {
@@ -188,10 +194,10 @@ c
 .map-illustration {
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background: radial-gradient(
-    circle at top,
-    rgba(255, 255, 255, 0.1),
-    rgba(19, 59, 139, 0.98)
+  background: linear-gradient(
+    90deg,
+    rgb(253, 122, 42, 0.98),
+    rgba(241, 100, 12, 0.98)
   );
   display: flex;
   align-items: center;
@@ -235,7 +241,7 @@ c
   background: radial-gradient(
     circle at top,
     rgba(255, 255, 255, 0.1),
-    rgba(19, 59, 139, 0.98)
+    rgba(255, 255, 255, 0.98)
   );
   border-radius: var(--radius-xl);
   border: 1px solid rgba(148, 163, 184, 0.4);
@@ -251,7 +257,11 @@ c
 }
 
 .btn-gradient {
-  background: linear-gradient(120deg, #fca636, #ffcc00);
+  background: linear-gradient(
+    90deg,
+    rgb(253, 122, 42, 0.98),
+    rgba(241, 100, 12, 0.98)
+  );
   border: none;
   color: #ffffff;
   font-weight: 600;
@@ -263,7 +273,6 @@ c
 .btn-gradient:hover {
   background: linear-gradient(120deg, #4ea5ff, #1a4d9b);
 }
-
 
 .partner-logo {
   max-height: 48px;

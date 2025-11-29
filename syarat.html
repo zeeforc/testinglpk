@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="utf-8" />
-    <title>Kurikulum LPK Paiton Selaras</title>
+    <meta charset="UTF-8" />
+    <title>Galeri LPK Paiton Selaras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
@@ -11,18 +11,18 @@
       rel="stylesheet"
     />
 
-    <!-- Google Fonts -->
+    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="kurikulum.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="syarat.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container py-2">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -68,11 +68,16 @@
                 href="#"
                 data-bs-toggle="dropdown"
               >
-                Acara
+                Acara & Bantuan
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="berita.html">Berita</a></li>
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+                <li>
+                  <a class="dropdown-item" href="syarat.html"
+                    >Panduan Mendaftar</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
@@ -132,124 +137,107 @@
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero-section">
-      <div class="container hero-inner">
-        <div class="row align-items-center gy-4">
+    <!-- HERO GALLERY -->
+    <section class="hero-gallery">
+      <div class="container">
+        <div class="row align-items-center gy-5">
           <div class="col-lg-6">
             <h1 class="hero-title mb-4">
-              <span>Kurikulum</span>
-              <span>Yang Kita</span>
-              <span>Implementasikan</span>
+              Panduan
+              <br />
+              Mendaftar PKL <br />
+              di LPK Paiton Selaras
             </h1>
-            <p class="text-dark fs-6 mb-0" style="max-width: 420px">
-              Rangkaian kurikulum praktik dan teori yang dirancang bersama mitra
-              industri agar peserta siap terjun ke dunia kerja di bidang mekanik
-              dan listrik.
+            <button class="btn-orange">Selengkapnya</button>
+          </div>
+
+          <div class="col-lg-6">
+            <p class="hero-desc ms-lg-5">
+              Berikut adalah tahapan tahapan pendaftaran magang di Kementerian
+              Keuangan. Berikut adalah tahapan tahapan pendaftaran magang di
+              Kementerian Keuangan.
             </p>
-            <button class="btn btn-orange mt-3 text-light">Selengkapnya</button>
-          </div>
-          <div class="col-lg-6">
-            <div class="hero-illustration-wrap">
-              <div class="hero-illustration-card">
-                <!-- ganti dengan ilustrasi sesuai desain -->
-                <img src="assets/maskot.png" alt="Ilustrasi mekanik" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Kurikulum 1 Mekanik -->
-    <section class="section-wrapper curriculum-bg-top">
-      <div class="container curriculum-section">
-        <div class="row align-items-center gy-4">
+    <!-- STEPS SECTION -->
+    <section class="steps-section">
+      <div class="container">
+        <div class="row align-items-start gy-5">
+          <!-- left text -->
           <div class="col-lg-6">
-            <div class="curriculum-card bg-transparent border-0">
-              <div class="curriculum-subtitle">Kurikulum 1</div>
-              <div class="curriculum-title text-white">Mekanik</div>
-              <p class="curriculum-desc mb-4">
-                Kurikulum Mekanik berfokus pada penguasaan keterampilan dalam
-                bidang permesinan dan teknik mekanik. Peserta belajar tentang
-                berbagai jenis mesin, cara perawatan, serta teknik perbaikan
-                komponen mekanis. Materi mencakup pemahaman dasar kerja bangku,
-                bubut, dan pengelasan.
-              </p>
-              <button class="btn btn-orange text-light mb-3">
-                Selengkapnya
-              </button>
+            <p class="steps-subtitle">Tahapan</p>
+            <h2 class="steps-title">Pendaftaran</h2>
+            <p class="steps-intro">
+              Berikut adalah tahapan tahapan pendaftaran magang di Kementerian
+              Keuangan.
+            </p>
 
-              <div class="curriculum-meta">
-                <div class="meta-icon text-warning">⚙</div>
+            <div class="step-list">
+              <div class="step-item">
+                <div class="step-badge">1</div>
                 <div>
-                  <div class="meta-label">Mekanik</div>
-                  <div class="meta-text">
-                    Kerja Bangku, Bubut Dasar, Pelatihan Dasar Pengelasan,
-                    pemeliharaan dan perbaikan mesin produksi sederhana.
-                  </div>
+                  <p class="step-text-title">Registrasi</p>
+                  <p class="step-text-body">
+                    Registrasi untuk mengetahui kuota pendaftar apakah masih
+                    ada.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-badge">2</div>
+                <div>
+                  <p class="step-text-title">Melengkapi Data</p>
+                  <p class="step-text-body">
+                    Isi dan lengkapi data profil mahasiswa dan periode magang.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-badge">3</div>
+                <div>
+                  <p class="step-text-title">Kirimkan berkas persyaratan</p>
+                  <p class="step-text-body">
+                    Unggah berkas persyaratan seperti surat pengantar, proposal
+                    magang, transkrip nilai, dan pas foto.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- right illustration -->
           <div class="col-lg-6">
-            <div class="curriculum-image-card-2 overlay-orange">
-              <!-- ganti src dengan foto praktik mekanik -->
-              <img src="assets/kurikulum-mekanik.png" alt="Pelatihan mekanik" />
-              <div class="curriculum-image-label">Mekanik</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kurikulum 2 Listrik -->
-    <section class="section-wrapper">
-      <div class="container curriculum-section">
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-          <div class="col-lg-6">
-            <div class="curriculum-card bg-transparent border-0">
-              <div class="curriculum-subtitle">Kurikulum 2</div>
-              <div class="curriculum-title text-white">Listrik</div>
-              <p class="curriculum-desc mb-4">
-                Kurikulum Listrik memberikan pengetahuan dan keterampilan
-                kelistrikan dari dasar sampai lanjutan. Peserta mempelajari
-                instalasi listrik, sistem kelistrikan rumah dan industri, serta
-                troubleshooting peralatan listrik dengan tetap mengutamakan
-                keselamatan kerja.
-              </p>
-              <button class="btn btn-orange text-light mb-3">
-                Selengkapnya
-              </button>
-
-              <div class="curriculum-meta">
-                <div class="meta-icon text-primary">⚡</div>
-                <div>
-                  <div class="meta-label">Listrik</div>
-                  <div class="meta-text">
-                    Dasar Instalasi Listrik, Relay, panel kontrol, kontraktor,
-                    pengenalan PLC, serta sistem refrigerant dasar yang
-                    digunakan di industri.
-                  </div>
-                </div>
+            <div class="steps-illustration-wrap d-flex flex-column align-items-center">
+              <!-- <div class="steps-circle"></div> -->
+              <img
+                src="/assets/folder.webp"
+                alt="Folder ilustrasi"
+                class="steps-folder-img"
+              />
+              <div class="row-steps">
+                  <p class="steps-note">
+                    Tekan tombol view untuk melihat panduan lengkap.
+                  </p>
+                  <a
+                    href="/assets/dokumen/Pedoman-Pendaftaran-LPK-Paiton-Selaras.png"
+                    class="steps-view-btn"
+                    download="Pedoman-Pendaftaran-LPK-Paiton-Selaras.png"
+                  >
+                    View / Download
+                  </a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
-            <div class="curriculum-image-card-2 overlay-blue">
-              <!-- ganti src dengan foto praktik listrik -->
-              <img src="assets/kurikulum-listrik.png" alt="Pelatihan listrik" />
-              <div class="curriculum-image-label">Listrik</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer partner -->
-    <footer class="footer">
+        <footer class="footer">
       <div class="container">
         <div class="row gy-4 align-items-start">
           <div class="col-lg-4 text-center text-lg-start">
@@ -258,25 +246,25 @@
               class="partner-logo mb-3"
               alt="Paiton Energy"
             />
-            <p class="small text-light mb-0">
+            <p class="small text-secondary text-light mb-0">
               PT Paiton Energy adalah perusahaan pembangkit listrik swasta
               independen pertama di Indonesia.
             </p>
           </div>
           <div class="col-lg-4 text-center">
             <img src="assets/pomi.png" class="partner-logo mb-3" alt="POMI" />
-            <p class="small text-light mb-0">
+            <p class="small text-secondary text-light mb-0">
               PT POMI merupakan perusahaan operasi dan pemeliharaan pembangkit
               listrik yang mengelola beberapa unit PLTU di Paiton.
             </p>
           </div>
-          <div class="col-lg-4 text-center text-lg-end">
+          <div class="col-lg-4 text-center text-lg-end align-items-center">
             <img
               src="assets/lpk.png"
               class="partner-logo mb-3"
               alt="LPK Paiton Selaras"
             />
-            <p class="small text-light mb-0">
+            <p class="small text-secondary text-light mb-0">
               LPK Paiton Selaras adalah lembaga pelatihan kerja yang berfokus
               pada pengembangan kompetensi masyarakat sekitar melalui program
               pelatihan teknis yang aplikatif.
@@ -284,8 +272,10 @@
           </div>
         </div>
 
-        <div class="footer-border text-center">
-          <small class="text-light"> © Copyright LPK Paiton Selaras </small>
+        <div class="footer-border text-center"></div>
+          <small class="text-secondary text-light text-center d-block mt-3">
+            © Copyright LPK Paiton Selaras
+          </small>
         </div>
       </div>
     </footer>

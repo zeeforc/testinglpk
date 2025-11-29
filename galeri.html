@@ -112,9 +112,9 @@
         <div class="container gallery-inner">
           <div class="row align-items-center gy-4">
             <div class="col-lg-5">
-              <h6 class="section-subtitle">Dokumentasi</h6>
-              <h2 class="section-title">Kegiatan</h2>
-              <p class="section-body">
+              <h6 class="section-subtitle text-dark">Dokumentasi</h6>
+              <h2 class="section-title text-dark">Kegiatan</h2>
+              <p class="section-body text-dark">
                 Seluruh kegiatan yang dilaksanakan kita dokumentasikan dan
                 ditampilkan di halaman ini karena kenangan yang disimpan dalam
                 sebuah foto akan selalu abadi.
@@ -180,19 +180,33 @@
                     data-index="2"
                   />
                 </div>
+                <!-- Tombol prev / next -->
+                <button
+                  type="button"
+                  class="gallery-nav gallery-prev"
+                  id="galleryPrev"
+                  aria-label="Sebelumnya"
+                >
+                  ‹
+                </button>
+
+                <button
+                  type="button"
+                  class="gallery-nav gallery-next"
+                  id="galleryNext"
+                  aria-label="Berikutnya"
+                >
+                  ›
+                </button>
               </div>
             </div>
           </div>
         </div>
+        <div class="gallery-preview-overlay" id="previewOverlay">
+          <img id="previewImage" alt="Preview kegiatan" />
+        </div>
       </section>
     </main>
-
-    <!-- PREVIEW OVERLAY -->
-    <div class="preview-overlay" id="previewOverlay">
-      <div class="preview-inner">
-        <img src="" alt="Preview" id="previewImage" />
-      </div>
-    </div>
 
     <!-- FOOTER SEDERHANA -->
     <footer class="footer">
@@ -204,14 +218,14 @@
               class="partner-logo mb-3"
               alt="Paiton Energy"
             />
-            <p class="small text-secondary mb-0">
+            <p class="small text-light mb-0">
               PT Paiton Energy adalah perusahaan pembangkit listrik swasta
               independen pertama di Indonesia.
             </p>
           </div>
           <div class="col-lg-4 text-center">
             <img src="assets/pomi.png" class="partner-logo mb-3" alt="POMI" />
-            <p class="small text-secondary mb-0">
+            <p class="small text-light mb-0">
               PT POMI merupakan perusahaan operasi dan pemeliharaan pembangkit
               listrik yang mengelola beberapa unit PLTU di Paiton.
             </p>
@@ -222,7 +236,7 @@
               class="partner-logo mb-3"
               alt="LPK Paiton Selaras"
             />
-            <p class="small text-secondary mb-0">
+            <p class="small text-light mb-0">
               LPK Paiton Selaras adalah lembaga pelatihan kerja yang berfokus
               pada pengembangan kompetensi masyarakat sekitar melalui program
               pelatihan teknis yang aplikatif.
@@ -231,7 +245,7 @@
         </div>
 
         <div class="footer-border text-center">
-          <small class="text-secondary"> © Copyright LPK Paiton Selaras </small>
+          <small class="text-light"> © Copyright LPK Paiton Selaras </small>
         </div>
       </div>
     </footer>
