@@ -23,27 +23,30 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container py-2">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <!-- Ganti src logo sesuai aset -->
           <img src="assets/logo.png" alt="Logo LPK" height="38" class="me-2" />
           <div class="d-flex flex-column lh-sm">
             <span class="fw-semibold">Lembaga Pelatihan Kerja</span>
             <small class="text-dark">Paiton Selaras</small>
           </div>
         </a>
+
+        <!-- Toggler: buka offcanvas di mobile -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler d-lg-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileNav"
+          aria-controls="mobileNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Menu desktop (horizontal biasa) -->
         <div
-          class="collapse navbar-collapse justify-content-end"
+          class="collapse navbar-collapse justify-content-end d-none d-lg-flex"
           id="mainNavbar"
         >
           <ul class="navbar-nav gap-lg-3">
@@ -65,14 +68,71 @@
                 href="#"
                 data-bs-toggle="dropdown"
               >
-                Acara
+                Acara & Bantuan
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="berita.html">Berita</a></li>
                 <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+                <li>
+                  <a class="dropdown-item" href="syarat.html"
+                    >Panduan Mendaftar</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
+        </div>
+
+        <!-- Menu mobile: offcanvas glass dari kanan -->
+        <div
+          class="offcanvas offcanvas-end offcanvas-glass d-lg-none"
+          tabindex="-1"
+          id="mobileNav"
+        >
+          <div class="offcanvas-header border-0">
+            <h6 class="mb-0">Menu</h6>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link offcanvas-nav-link" href="index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link offcanvas-nav-link" href="kurikulum.html"
+                  >Kurikulum</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link offcanvas-nav-link" href="pelatihan.html"
+                  >Pelatihan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link offcanvas-nav-link" href="sarana.html"
+                  >Sarana Prasarana</a
+                >
+              </li>
+              <li class="nav-item mt-2">
+                <span class="text-uppercase small text-muted d-block mb-1"
+                  >Acara</span
+                >
+                <a class="nav-link offcanvas-nav-link ps-3" href="berita.html"
+                  >Berita</a
+                >
+                <a class="nav-link offcanvas-nav-link ps-3" href="galeri.html"
+                  >Galeri</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -110,8 +170,12 @@
         <div class="container">
           <div class="row align-items-center gy-4">
             <!-- Teks "Berita Terbaru" -->
-            <div class="col-lg-4 d-flex flex-column align-item-start justify-content-start">
-              <div class="latest-text-block d-flex flex-column justify-content-start">
+            <div
+              class="col-lg-4 d-flex flex-column align-item-start justify-content-start"
+            >
+              <div
+                class="latest-text-block d-flex flex-column justify-content-start"
+              >
                 <h6 class="section-subtitle text-dark text-start">Berita</h6>
                 <h2 class="section-title text-dark text-start">Terbaru</h2>
                 <p class="section-body text-dark text-start ms-auto">
